@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto de Fake News e Deepfakes - Alvo News</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Geral */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .oculto {
+            display: none;
+        }
+
+        header {
+            background-color: #B22222; /* Cor vermelha (Firebrick) */
+            color: #fff;
+            padding: 20px;
+        }
+
+        header .logo h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+        }
+
+        header .logo p {
+            font-size: 1.2rem;
+            margin-top: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+            font-weight: 600;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00; /* Cor dourada para hover */
+        }
+
+        .conteudo-principal {
+            display: flex;
+            max-width: 1200px;
+            margin: 30px auto;
+            gap: 20px;
+        }
+
+        .artigo {
+            width: 75%;
+        }
+
+        .artigo h1 {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .artigo h2, .artigo h3 {
+            font-size: 2.2rem;
+            margin-top: 30px;
+            color: #333;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .artigo p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .sidebar {
+            width: 25%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .sidebar h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .sidebar p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #B22222; /* Cor vermelha (Firebrick) */
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Estilo para o conteúdo adicional */
+        .texto-adicional {
+            margin-top: 30px;
+        }
+
+        /* Seções de Sobre e Contato */
+        .sobre, .contato {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sobre h2, .contato h2 {
+            font-size: 2.2rem;
+            color: #B22222; /* Cor vermelha (Firebrick) */
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .sobre p, .contato p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .conteudo-principal {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .artigo {
+                width: 100%;
+            }
+
+            .sidebar {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <h1>Alvo News</h1>
+            <p>Notícias e Análises</p>
+        </div>
+        <nav class="navegacao">
+            <ul>
+                <li><a href="#" onclick="mostrar('home')">Home</a></li>
+                <li><a href="#" onclick="mostrar('sobre')">Sobre</a></li>
+                <li><a href="#" onclick="mostrar('contato')">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo-principal" id="home">
+        <article class="artigo">
+            <h1>Um estudo sobre o impacto de fake news e deepfake em redes sociais</h1>
+
+            <p>No presente trabalho é tratado, em ordem, uma linha do tempo em que é perceptível o acontecimento das fake news sendo a propagação de desinformação...
+            O objetivo do trabalho foi explorar as áreas de fake news e deepfake e suas diversas ramificações...</p>
+
+            <h2>Impacto de Fake News e Deepfakes nas Redes Sociais</h2>
+            <p>As redes sociais se tornaram uma plataforma poderosa de comunicação, mas também têm sido usadas para espalhar informações falsas...</p>
+
+            <h3>O que são Fake News e Deepfakes?</h3>
+            <p><strong>Fake News:</strong> Notícias falsas ou distorcidas, muitas vezes criadas com o objetivo de enganar, manipular ou gerar cliques. Elas podem ser espalhadas por redes sociais, sites e até mensagens de texto.</p>
+            <p><strong>Deepfakes:</strong> Vídeos ou áudios manipulados com tecnologia de inteligência artificial para criar conteúdos falsos, mas extremamente realistas. Esses conteúdos podem colocar palavras ou ações na boca de pessoas que nunca as disseram.</p>
+
+            <h3>Consequências das Fake News e Deepfakes nas Redes Sociais</h3>
+            <p><strong>Desinformação e Polarização:</strong> Fake news podem alimentar narrativas falsas, polarizar opiniões e dividir sociedades. Isso pode resultar em conflitos sociais, violência e desconfiança nas instituições governamentais e de saúde.</p>
+            <p><strong>Perda de Credibilidade e Confiança:</strong> Com a propagação de notícias falsas, muitas pessoas perdem a confiança nas plataformas de redes sociais, dificultando a identificação de informações verdadeiras. Isso compromete o valor dessas plataformas como fontes confiáveis de informação.</p>
+            <p><strong>Manipulação Eleitoral:</strong> Em períodos eleitorais, as fake news e deepfakes têm sido usadas para manipular eleitores, disseminando boatos sobre candidatos, falsificando declarações ou criando cenários inexistentes para influenciar votos.</p>
+            <p><strong>Riscos para a Imagem Pessoal e Profissional:</strong> Deepfakes podem prejudicar indivíduos, criando vídeos ou áudios comprometedores que afetam sua reputação. Isso tem implicações sérias para a vida pessoal e profissional das pessoas envolvidas.</p>
+            <p><strong>Danos à Saúde Pública:</strong> Fake news relacionadas a saúde, como informações erradas sobre vacinas, tratamentos ou pandemias, podem causar pânico, desinformação e até o agravamento de crises sanitárias.</p>
+
+            <h3>Como Combater o Impacto?</h3>
+            <p><strong>Verificação de Fontes:</strong> Incentivar o uso de ferramentas de checagem de fatos e promover uma abordagem crítica em relação ao conteúdo compartilhado.</p>
+            <p><strong>Educação Digital:</strong> Promover a alfabetização midiática para ensinar as pessoas a reconhecer sinais de fake news e deepfakes.</p>
+            <p><strong>Tecnologia de Detecção:</strong> Investir em tecnologias que possam identificar deepfakes e notícias falsas, bloqueando sua propagação nas plataformas.</p>
+            <p><strong>Responsabilidade das Plataformas:</strong> As redes sociais devem assumir um papel ativo no combate à desinformação, criando sistemas mais eficazes de moderação e punição de comportamentos fraudulentos.</p>
+
+            <h3>Conclusão</h3>
+            <p>Fake news e deepfakes são desafios modernos que exigem a colaboração de usuários, plataformas e governantes. Somente com educação, conscientização e tecnologias de combate eficazes poderemos minimizar os danos causados pela desinformação e garantir que as redes sociais continuem sendo um espaço de comunicação saudável e confiável.</p>
+        </article>
+
+        <aside class="sidebar">
+            <h3>Sidebar</h3>
+
+          <img src="Japinhadocv.jpg" 
+         alt="Imagem da sidebar" 
+         style="width:100%; border-radius:8px; margin-bottom:15px;">
+
+            <p>Conteúdo adicional relacionado.</p>
+        </aside>
+    </main>
+
+    <section class="sobre oculto" id="sobre">
+        <h2>Sobre</h2>
+        <p>Este site foi criado para divulgar informações e pesquisas confiáveis, promovendo conhecimento baseado em fatos e conscientização sobre temas relevantes.</p>
+        <p><strong>Criadores:</strong> Cecília Loren, Ana Lívia Maximo e Bryan Ferreira</p>
+    </section>
+
+    <section class="contato oculto" id="contato">
+        <h2>Contato</h2>
+        <p><strong>Número:</strong> (11) 91333-3556</p>
+        <p><strong>Email:</strong> alvonews@gmail.com</p>
+    </section>
+
+    <footer class="rodape">
+        <p>&copy; 2025 Alvo News. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+    function mostrarSecao(id) {
+        document.querySelectorAll('.sobre, .contato').forEach(secao => {
+            secao.classList.add('oculto');
+        });
+
+        document.getElementById(id).classList.toggle('oculto');
+    }
+
+    document.querySelector('a[href="#sobre"]').addEventListener('click', function(e) {
+        e.preventDefault();
+        mostrarSecao('sobre');
+    });
+
+    document.querySelector('a[href="#contato"]').addEventListener('click', function(e) {
+        e.preventDefault();
+        mostrarSecao('contato');
+    });
+</script>
+
+    <script>
+function mostrar(id) {
+    // Esconde todas as seções
+    document.getElementById('home').style.display = 'none';
+    document.getElementById('sobre').style.display = 'none';
+    document.getElementById('contato').style.display = 'none';
+    
+    // Mostra a seção clicada
+    document.getElementById(id).style.display = 'block';
+}
+</script>
+
+
+</body>
+</html>
